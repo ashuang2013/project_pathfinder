@@ -1,0 +1,211 @@
+ZEROTH
+1, yes (harmless), Resistance, Will negates (harmless), touch, creature touched, 1 minute, 1 standard action
+You imbue the subject with magical energy that protects it from harm, granting it a +1 resistance bonus on saves.\n\nResistance can be made permanent with a permanency spell.
+bard 0, cleric/oracle 0, druid 0, inquisitor 0, paladin 1, psychic 0, shaman 0, sorcerer/wizard 0, summoner/unchained summoner 0, witch 0
+abjuration
+V, S, M/DF (a miniature cloak)
+
+ZEROTH
+0, no, Acid Splash, none, close (25 ft. + 5 ft./2 levels), one missile of acid, instantaneous, 1 standard action
+You fire a small orb of acid at the target. You must succeed on a ranged touch attack to hit your target. The orb deals 1d3 points of acid damage. This acid disappears after 1 round.
+inquisitor 0, magus 0, sorcerer/wizard 0, summoner/unchained summoner 0, Elemental School: earth 0
+conjuration (creation) [acid]
+V, S
+
+ZEROTH
+1, yes (object), Drench, Reflex negates (object), close (25 ft. + 5 ft./2 levels), one creature or object of size Large or smaller, 1 round, 1 standard action
+A sudden downpour soaks the target creature or object. The rain follows the subject up to the range of the spell, soaking the target with water. If the target is on fire, the flames are automatically extinguished. Fires smaller than campfires (such as lanterns and torches) are automatically extinguished by this spell.
+sorcerer/wizard 0
+conjuration (creation) [water]
+V, S
+
+ZEROTH
+2, no, Detect Fiendish Presence, none, 60 ft., cone-shaped emanation, concentration-up to 10 minute/level (D), 1 standard action
+This spell functions like detect evil, except that it detects only outsiders with the evil subtype, as well as the lingering effects caused by their gifts, presence, and spells. It can also detect clerics and paladins of fiendish deities, including Asmodeus, archdevils, daemonic harbingers, and demon lords.
+bard 0, cleric 0, magus 0, sorcerer/wizard 0, witch 0
+divination
+V, S
+
+ZEROTH
+2, no, Detect Magic, none, 60 ft., cone-shaped emanation, concentration;up to 1 minute/level (D), 1 standard action
+You detect magical auras. The amount of information revealed depends on how long you study a particular area or subject.\n\n1st Round: Presence or absence of magical auras.\n\n2nd Round: Number of different magical auras and the power of the most potent aura.\n\n3rd Round: The strength and location of each aura. If the items or creatures bearing the auras are in line of sight, you can make Knowledge (arcana) skill checks to determine the school of magic involved in each. (Make one check per aura: DC 15 + spell level, or 15 + 1/2 caster level for a nonspell effect.) If the aura emanates from a magic item, you can attempt to identify its properties (see Spellcraft).\n\nMagical areas, multiple types of magic, or strong local magical emanations may distort or conceal weaker auras.\n\nAura Strength: An aura's power depends on a spell's functioning spell level or an item's caster level; see the accompanying table. If an aura falls into more than one category, detect magic indicates the stronger of the two.\n -------------------------------------------------------------------------------------------------------\n|Spell or Object 		|Faint Aura	|Moderate Aura	|Strong Aura	|Overwhelming Aura	|\n -------------------------------------------------------------------------------------------------------\n|Functioning Spell (spell level)|3rd or lower   |4th-6th        |7th-9th	|10th+ (deity-level)	|\n -------------------------------------------------------------------------------------------------------\n|Magic Item (caster level)	|5th or lower	|6th-11th	|12th-20th	|21st+ (artifact)	|\n -------------------------------------------------------------------------------------------------------\n\nLingering Aura: A magical aura lingers after its original source dissipates (in the case of a spell) or is destroyed (in the case of a magic item). If detect magic is cast and directed at such a location, the spell indicates an aura strength of dim (even weaker than a faint aura). How long the aura lingers at this dim level depends on its original power:\n -------------------------------------------------------\n|Original Strength	|Duration of Lingering Aura	|\n -------------------------------------------------------\n|Faint			|1d6 rounds			|\n -------------------------------------------------------\n|Moderate		|1d6 minutes			|\n -------------------------------------------------------\n|Strong			|1d6x10 minutes			|\n -------------------------------------------------------\n|Overwhelming		|1d6 days			|\n -------------------------------------------------------\nOutsiders and elementals are not magical in themselves, but if they are summoned, the conjuration spell registers. Each round, you can turn to detect magic in a new area. The spell can penetrate barriers, but 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt blocks it.\n\nDetect magic can be made permanent with a permanency spell.
+bard 0, cleric/oracle 0, druid 0, inquisitor 0, magus 0, psychic 0, shaman 0, sorcerer/wizard 0, summoner/unchained summoner 0, witch 0
+divination
+V, S
+
+ZEROTH
+3, no, Detect Poison, none, close (25 ft. + 5 ft./2 levels), one creature; one object; or a 5-ft. cube, instantaneous, 1 standard action
+You determine whether a creature, object, or area has been poisoned or is poisonous. You can determine the exact type of poison with a DC 20 Wisdom check. A character with the Craft (alchemy) skill may try a DC 20 Craft (alchemy) check if the Wisdom check fails, or may try the Craft (alchemy) check prior to the Wisdom check. The spell can penetrate barriers, but 1 foot of stone, 1 inch of common metal, a thin sheet of lead, or 3 feet of wood or dirt blocks it.
+antipaladin 1, cleric/oracle 0, druid 0, inquisitor 0, paladin 1, psychic 0, ranger 1, shaman 0, sorcerer/wizard 0, witch 0
+divination
+V, S
+
+ZEROTH
+4, none, Read Magic, none, personal, you, 10 min./level, 1 standard action
+You can decipher magical inscriptions on objects - books, scrolls, weapons, and the like - that would otherwise be unintelligible. This deciphering does not normally invoke the magic contained in the writing, although it may do so in the case of a cursed or trapped scroll. Furthermore, once the spell is cast and you have read the magical inscription, you are thereafter able to read that particular writing without recourse to the use of read magic. You can read at the rate of one page (250 words) per minute. The spell allows you to identify a glyph of warding with a DC 13 Spellcraft check, a greater glyph of warding with a DC 16 Spellcraft check, or any symbol spell with a Spellcraft check (DC 10 + spell level).\n\nRead magic can be made permanent with a permanency spell.
+antipaladin 1, bard 0, cleric/oracle 0, druid 0, inquisitor, magus 0, paladin 1, psychic 0, ranger 1, shaman 0, sorcerer/wizard 0, summoner/unchained summoner 0, witch 0
+divination
+V, S, F (a clear crystal or mineral prism)
+
+ZEROTH
+1, yes, Daze, Will negates, close (25 ft. + 5 ft./2 levels), one humanoid creature of 4 HD or less, 1 round, 1 standard action
+This spell clouds the mind of a humanoid creature with 4 or fewer Hit Dice so that it takes no actions. Humanoids of 5 or more HD are not affected. A dazed subject is not stunned, so attackers get no special advantage against it. After a creature has been dazed by this spell, it is immune to the effects of this spell for 1 minute.\n\nDazed Condition: The creature is unable to act normally. A dazed creature can take no actions, but has no penalty to AC.
+bard 0, inquisitor 0, magus 0, psychic 0, shaman 0, sorcerer/wizard 0, summoner/unchained summoner 0, witch 0
+enchantment (compulsion) [mind-affecting]
+V, S, M (a pinch of wool or similar substance)
+
+ZEROTH
+1, yes, Breeze, Will negates (harmless), close (25 ft. + 5 ft./2 levels), one creature or object, 1 hour (D), 1 standard action
+You create a light wind that blows against the target, from a direction of your choice. The breeze grants the subject a +2 bonus on saves against very hot conditions, severe heat, breath weapons, and saves against cloud vapors and gases (such as cloudkill, stinking cloud, and inhaled poisons). This spell does not function without air or underwater.\n\nYou can only have one breeze active at any one time. If you cast this spell while another casting is still in effect, the previous casting is dispelled.
+sorcerer/wizard 0
+evocation (air)
+V, S, M (a miniature fan)
+
+ZEROTH
+0, no, Dancing Lights, none, medium (100 ft. + 10 ft./2 levels), up to four lights; all within a 10-ft. radius area, 1 minute (D), 1 standard action
+Depending on the version selected, you create up to four lights that resemble lanterns or torches (and cast that amount of light), or up to four glowing spheres of light (which look like will-o’-wisps), or one faintly glowing, vaguely humanoid shape. The dancing lights must stay within a 10-foot-radius area in relation to each other but otherwise move as you desire (no concentration required): forward or back, up or down, straight or turning corners, or the like. The lights can move up to 100 feet per round. A light winks out if the distance between you and it exceeds the spell’s range.\n\nYou can only have one dancing lights spell active at any one time. If you cast this spell while another casting is still in effect, the previous casting is dispelled. If you make this spell permanent, it does not count against this limit.\n\nDancing lights can be made permanent with a permanency spell.
+bard 0, magus 0, psychic 0, shaman 0, sorcerer/wizard 0, witch 0
+evocation [light]
+V, S
+
+ZEROTH
+0, yes, Flare, Fortitude negates, close (25 ft. + 5 ft./2 levels), burst of light, instantaneous, 1 standard action
+This cantrip creates a burst of light. If you cause the light to burst in front of a single creature, that creature is dazzled for 1 minute unless it makes a successful Fortitude save. Sightless creatures, as well as creatures already dazzled, are not affected by flare.
+bard 0, druid 0, magus 0, psychic 0, sorcerer/wizard 0
+evocation [light]
+V
+
+ZEROTH
+1, no, Light, none, touch, object touched, 10 min./level, 1 standard action
+This spell causes a touched object to glow like a torch, shedding normal light in a 20-foot radius from the point touched, and increasing the light level for an additional 20 feet by one step, up to normal light (darkness becomes dim light, and dim light becomes normal light). In an area of normal or bright light, this spell has no effect. The effect is immobile, but it can be cast on a movable object.\n\nYou can only have one light spell active at any one time. If you cast this spell while another casting is still in effect, the previous casting is dispelled. If you make this spell permanent (through permanency or a similar effect), it does not count against this limit. Light can be used to counter or dispel any darkness spell of equal or lower spell level.
+bard 0, cleric/oracle 0, druid 0, inquisitor 0, magus 0, psychic 0, shaman 0, sorcerer/wizard 0, summoner/unchained summoner 0, witch 0, Elemental School: wood 0
+evocation [light]
+V, M/DF (a firefly)
+
+
+ZEROTH
+1, yes, Penumbra, Will negates (harmless), touch, creature or object touched, 10 min./level (D), 1 standard action
+This spell keeps the creature or object touched slightly in shadow. The target of this spell does not suffer any penalties or blindness caused by bright light, such as those from light sensitivity or light blindness.\n\nYou can have only one penumbra spell active at any one time. If you cast this spell while another casting is still in effect, the previous casting is dispelled.
+sorcerer/wizard 0
+evocation [darkness]
+V, S, M (a bit of soot)
+
+ZEROTH
+0, yes, Ray of Frost, none, close (25 ft. + 5 ft./2 levels), ray, instantaneous, 1 standard action
+A ray of freezing air and ice projects from your pointing finger. You must succeed on a ranged touch attack with the ray to deal damage to a target. The ray deals 1d3 points of cold damage.
+magus 0, sorcerer/wizard 0, Elemental School: water 0
+evocation [cold]
+V, S
+
+ZEROTH
+0, yes, Scoop, none, close (25 ft. + 5 ft./2 levels), 6-inch diameter contained of force, concentration, 1 standard action
+You will a small vessel of force into existence. As a move action, you can direct the container up to 15 feet per round in any direction, though the spell ends if the distance between you and the container ever exceeds the spell’s range. You can dip the container to pick up or drop a liquid as a move action. The vessel holds up to 1 pint of liquid or small objects, weighing up to 5 pounds. You can also gather up a pint of liquid or small objects spread cross a surface with 1 minute of careful concentration.
+sorcerer/wizard 0
+evocation [force]
+V, S
+
+ZEROTH
+1, yes (object), Spark, Fortitude negates (object), close (25 ft. + 5 ft./2 levels), one Fine object, instantaneous, 1 standard action
+You can make an unattended Fine flammable object catch on fire. This works as if you were using flint and steel except that you can use spark in any sort of weather and it takes much less time to actually ignite an object. 
+bard 0, cleric/oracle 0, druid 0, magus 0, sorcerer/wizard 0, witch 0, Elemental School: fire 0
+evocation [fire]
+V or S
+
+ZEROTH
+0, no, Ghost Sound, Will disbelief, close (25 ft. + 5 ft./2 levels), illusory sounds, 1 round/level (D), 1 standard action
+Ghost sound allows you to create a volume of sound that rises, recedes, approaches, or remains at a fixed place. You choose what type of sound ghost sound creates when casting it and cannot thereafter change the sound's basic character.\n\nThe volume of sound created depends on your level. You can produce as much noise as four normal humans per caster level (maximum 40 humans). Thus, talking, singing, shouting, walking, marching, or running sounds can be created. The noise a ghost sound spell produces can be virtually any type of sound within the volume limit. A horde of rats running and squeaking is about the same volume as eight humans running and shouting. A roaring lion is equal to the noise from 16 humans, while a roaring dragon is equal to the noise from 32 humans. Anyone who hears a ghost sound receives a Will save to disbelieve.\n\nGhost sound can enhance the effectiveness of a silent image spell.\n\nGhost sound can be made permanent with a permanency spell.\n\nFAQ: Can ghost sound create intelligible speech?\n\nMaking something that sounds like speech, and actually making intelligible speech are two different things. This spell can create sound that resembles people talking, but anyone listening carefully find they can't actually make out what the "people" are saying (imagine a crowded room with background conversations you can't focus in on). After all, it is a cantrip, and shouldn't be as good as ventriloquism (which is a higher-level spell). 
+bard 0, magus 0, psychic 0, sorcerer/wizard 0
+illusion (figment)
+V, S, M (a bit of wool or a small lump of wax)
+
+ZEROTH
+4, none, Haunted Fey Aspect, none, personal, you, 1 round/level (D), 1 standard action
+You surround yourself with disturbing illusions, making you look and sound like a bizarre, insane fey creature. You gain DR 1/cold iron against a single opponent until the end of the spell, or until you take damage.
+bard 0, psychic 0, sorcerer/wizard 0
+illusion (glamer)
+S
+
+ZEROTH
+1, yes, Bleed, Will negates, close (25 ft. + 5 ft./2 levels), one living creature, instantaneous, 1 standard action
+You cause a living creature that is below 0 hit points but stabilized to resume dying. Upon casting this spell, you target a living creature that has -1 or fewer hit points. That creature begins dying, taking 1 point of damage per round. The creature can be stabilized later normally. This spell causes a creature that is dying to take 1 point of damage.
+cleric/oracle 0, inquisitor 0, psychic 0, shaman 0, sorcerer/wizard 0, witch 0
+necromancy
+V, S
+
+ZEROTH
+0, yes, Disrupt Undead, none, close (25 ft. + 5 ft./2 levels), ray, instantaneous, 1 standard action
+You direct a ray of positive energy.\n\nYou must make a ranged touch attack to hit, and if the ray hits an undead creature, it deals 1d6 points of damage to it.
+inquisitor 0, magus 0, sorcerer/wizard 0
+necromancy
+V, S
+
+ZEROTH
+1, yes, Touch of Fatigue, Fortitude negates, touch, creature touched, 1 round/level, 1 standard action
+You channel negative energy through your touch, fatiguing the target. You must succeed on a touch attack to strike a target. The subject is immediately fatigued for the spell’s duration.\n\nThis spell has no effect on a creature that is already fatigued. Unlike with normal fatigue, the effect ends as soon as the spell’s duration expires.
+shaman 0, sorcerer/wizard 0, witch 0
+necromancy
+V, S, M (a drop of sweat)
+
+
+ZEROTH
+0, yes, Jolt, none, close (25 ft. + 5 ft./2 levels), spark of electricity, instantaneous, 1 standard action
+You cause a spark of electricity to strike the target with a successful ranged touch attack. The spell deals 1d3 points of electricity damage.
+sorcerer/wizard 0
+transmutation [electricity]
+V, S
+
+ZEROTH
+1, no, Mage Hand, none, close (25 ft. + 5 ft./2 levels), one non-magical; unattended object weighing up to 5 lbs., concentration, 1 standard action
+You point your finger at an object and can lift it and move it at will from a distance. As a move action, you can propel the object as far as 15 feet in any direction, though the spell ends if the distance between you and the object ever exceeds the spell’s range.
+bard 0, magus 0, psychic 0, sorcerer/wizard 0, summoner/unchained summoner 0
+transmutation
+V, S
+
+ZEROTH
+1, yes (harmless; object), Mending, Will negates (harmless; object), 10 ft., one object of up to 1 lb./level, concentration, 1 standard action
+This spell repairs damaged objects, restoring 1d4 hit points to the object. If the object has the broken condition, this condition is removed if the object is restored to at least half its original hit points. All of the pieces of an object must be present for this spell to function. Magic items can be repaired by this spell, but you must have a caster level equal to or higher than that of the object. Magic items that are destroyed (at 0 hit points or less) can be repaired with this spell, but this spell does not restore their magic abilities. This spell does not affect creatures (including constructs). This spell has no effect on objects that have been warped or otherwise transmuted, but it can still repair damage done to such items.
+bard 0, cleric/oracle 0, druid 0, psychic 0, shaman 0, sorcerer/wizard 0, summoner/unchained summoner 0, witch 0, Elemental School: metal 0
+transmutation
+V, S
+
+ZEROTH
+1, no, Message, none, medium (100 ft. + 10 ft./2 levels), one creature/level, 10 min./level, 1 standard action
+You can whisper messages and receive whispered replies. Those nearby can hear these messages with a DC 25 Perception check. You point your finger at each creature you want to receive the message. When you whisper, the whispered message is audible to all targeted creatures within range. Magical silence, 1 foot of stone, 1 inch of common metal (or a thin sheet of lead), or 3 feet of wood or dirt blocks the spell. The message does not have to travel in a straight line. It can circumvent a barrier if there is an open path between you and the subject, and the path’s entire length lies within the spell’s range. The creatures that receive the message can whisper a reply that you hear. The spell transmits sound, not meaning; it doesn’t transcend language barriers. To speak a message, you must mouth the words and whisper.
+bard 0, psychic 0, sorcerer/wizard 0, summoner/unchained summoner 0, witch 0, Elemental School: air 0
+transmutation [language-dependent]
+V, S, F (a piece of copper wire)
+
+ZEROTH
+1, yes (object), Open-Close, Will negates (object), close (25 ft. + 5 ft./2 levels), object weighing up to 30 lbs. or portal that can be opened or closed, instantaneous, 1 standard action
+You can open or close (your choice) a door, chest, box, window, bag, pouch, bottle, barrel, or other container. If anything resists this activity (such as a bar on a door or a lock on a chest), the spell fails. In addition, the spell can only open and close things weighing 30 pounds or less. Thus, doors, chests, and similar objects sized for enormous creatures may be beyond this spell’s ability to affect.
+bard 0, magus 0, psychic 0, sorcerer/wizard 0, summoner/unchained summoner 0
+transmutation
+V, S, F (a brass key)
+
+ZEROTH
+1, yes, Root, Will negates (harmless), touch, creature touched, 1 minute (D), 1 standard action
+This spell strengthens the subject’s connection to the ground below, bolstering its defense against combat maneuvers. It gains a +2 insight bonus to its CMD to resist being moved or tripped and a +2 competence bonus on all Acrobatics checks made to balance or remain standing on earth, sand, stone, or a similar rocky substance.
+sorcerer/wizard 0
+transmutation [earth]
+V, S, M (a pinch of dirt)
+
+ZEROTH
+1, yes, Scrivener's Chant, Will negates (harmless; object), 5 ft., one or more written objects, concentration; up to 1 min./level (D), 1 standard action
+This spell imbues a quill with animate energy and rapidly transcribes words from one page to another. The quill copies a written work at the rate of one normal-sized page per minute. The Linguistics skill can be used to make a convincing copy, but otherwise the reproduction is written in the hand of the caster. You must concentrate upon the material being duplicated for the spell’s duration and provide new blank pages as required. The scrivener’s chant requires blank paper and a quill or other writing materials, in addition to the material components.
+bard 0, cleric/oracle 0, sorcerer/wizard 0
+transmutation
+V, S, M (fine sand and a vial of ink)
+
+ZEROTH
+0, no, Arcane Mark, none, touch, one personal rune or mark; all of which must fit within 1 sq. ft., permanent, 1 standard action
+This spell allows you to inscribe your personal rune or mark, which can consist of no more than six characters. The writing can be visible or invisible. An arcane mark spell enables you to etch the rune upon any substance without harm to the material upon which it is placed. If an invisible mark is made, a detect magic spell causes it to glow and be visible, though not necessarily understandable.\n\nSee invisibility, true seeing, a gem of seeing, or a robe of eyes likewise allows the user to see an invisible arcane mark. A read magic spell reveals the words, if any. The mark cannot be dispelled, but it can be removed by the caster or by an erase spell.\n\nIf an arcane mark is placed on a living being, the effect gradually fades in about a month.\n\nArcane mark must be cast on an object prior to casting instant summons on the same object (see that spell description for details).
+magus 0, psychic 0, shaman 0, sorcerer/wizard 0, summoner/unchained summoner 0, witch 0
+universal
+V, S
+
+ZEROTH
+5, no, Prestidigitation, see text, 10 ft., see text, 1 hour, 1 standard action
+Prestidigitations are minor tricks that novice spellcasters use for practice. Once cast, a prestidigitation spell enables you to perform simple magical effects for 1 hour. The effects are minor and have severe limitations. A prestidigitation can slowly lift 1 pound of material. It can color, clean, or soil items in a 1-foot cube each round. It can chill, warm, or flavor 1 pound of nonliving material. It cannot deal damage or affect the concentration of spellcasters. Prestidigitation can create small objects, but they look crude and artificial. The materials created by a prestidigitation spell are extremely fragile, and they cannot be used as tools, weapons, or spell components. Finally, prestidigitation lacks the power to duplicate any other spell effects. Any actual change to an object (beyond just moving, cleaning, or soiling it) persists only 1 hour.
+bard 0, magus 0, psychic 0, sorcerer/wizard 0
+universal
+V, S

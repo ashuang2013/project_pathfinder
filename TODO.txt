@@ -1,0 +1,20 @@
+//TODO
+
+TODO: CREATE A CLASS TEMPLATE LIKE WIZARD AND THEN BUILD OFF OF THAT 
+FOR EXAMPLE, IN WIZARD, WE NEED TO BUILD A WIZARD SPELL LIST, THEN THE FEATS (METAMAGIC FEATS, ETC.), THEN HP, THEN INNATE, THEN SCHOOLS, THEN OTHERS
+
+PC conversion into .h and .cpp
+individual spell lists (such as sorcerer/wizard, cleric, alchemist spell list, etc.)
+feats
+skills
+level
+age
+ac
+equipment
+autmatic access
+classes
+race
+size
+deity
+alignmnet
+add stuff like when you hover over stunned it tells you what it does, add stuff like when you hover over a class it tells you what happens like in aon
