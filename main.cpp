@@ -4,8 +4,8 @@
 #include <iostream>
 
 //#include "PC.h" later
-#include "spell.h"
-#include "spellist.h"
+#include "spell/spell.h"
+#include "spell/spellist.h"
 
 int main() {
     //CREATE THE SPELLIST
@@ -22,7 +22,7 @@ int main() {
     std::set<spell> ninth;
 
     spellist swsl(innate, zeroth, first, second, third, fourth, fifth, sixth, seventh, eigth, ninth);
-    swsl.loadSpellList("sorcererwizardsl.txt");
+    swsl.loadSpellList("spell/sorcererwizardsl.txt");
     //swsl.loadSpellList("sltest.txt");
     //FINISH LOADING IN SPELLIST
     swsl.printSpellList(); 

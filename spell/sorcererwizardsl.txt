@@ -63,7 +63,7 @@ V, S, M (a miniature fan)
 
 ZEROTH
 0, no, Dancing Lights, none, medium (100 ft. + 10 ft./2 levels), up to four lights; all within a 10-ft. radius area, 1 minute (D), 1 standard action
-Depending on the version selected, you create up to four lights that resemble lanterns or torches (and cast that amount of light), or up to four glowing spheres of light (which look like will-o’-wisps), or one faintly glowing, vaguely humanoid shape. The dancing lights must stay within a 10-foot-radius area in relation to each other but otherwise move as you desire (no concentration required): forward or back, up or down, straight or turning corners, or the like. The lights can move up to 100 feet per round. A light winks out if the distance between you and it exceeds the spell’s range.\n\nYou can only have one dancing lights spell active at any one time. If you cast this spell while another casting is still in effect, the previous casting is dispelled. If you make this spell permanent, it does not count against this limit.\n\nDancing lights can be made permanent with a permanency spell.
+Depending on the version selected, you create up to four lights that resemble lanterns or torches (and cast that amount of light), or up to four glowing spheres of light (which look like will-o'-wisps), or one faintly glowing, vaguely humanoid shape. The dancing lights must stay within a 10-foot-radius area in relation to each other but otherwise move as you desire (no concentration required): forward or back, up or down, straight or turning corners, or the like. The lights can move up to 100 feet per round. A light winks out if the distance between you and it exceeds the spell's range.\n\nYou can only have one dancing lights spell active at any one time. If you cast this spell while another casting is still in effect, the previous casting is dispelled. If you make this spell permanent, it does not count against this limit.\n\nDancing lights can be made permanent with a permanency spell.
 bard 0, magus 0, psychic 0, shaman 0, sorcerer/wizard 0, witch 0
 evocation [light]
 V, S
@@ -99,7 +99,7 @@ V, S
 
 ZEROTH
 0, yes, Scoop, none, close (25 ft. + 5 ft./2 levels), 6-inch diameter contained of force, concentration, 1 standard action
-You will a small vessel of force into existence. As a move action, you can direct the container up to 15 feet per round in any direction, though the spell ends if the distance between you and the container ever exceeds the spell’s range. You can dip the container to pick up or drop a liquid as a move action. The vessel holds up to 1 pint of liquid or small objects, weighing up to 5 pounds. You can also gather up a pint of liquid or small objects spread cross a surface with 1 minute of careful concentration.
+You will a small vessel of force into existence. As a move action, you can direct the container up to 15 feet per round in any direction, though the spell ends if the distance between you and the container ever exceeds the spell's range. You can dip the container to pick up or drop a liquid as a move action. The vessel holds up to 1 pint of liquid or small objects, weighing up to 5 pounds. You can also gather up a pint of liquid or small objects spread cross a surface with 1 minute of careful concentration.
 sorcerer/wizard 0
 evocation [force]
 V, S
@@ -141,7 +141,7 @@ V, S
 
 ZEROTH
 1, yes, Touch of Fatigue, Fortitude negates, touch, creature touched, 1 round/level, 1 standard action
-You channel negative energy through your touch, fatiguing the target. You must succeed on a touch attack to strike a target. The subject is immediately fatigued for the spell’s duration.\n\nThis spell has no effect on a creature that is already fatigued. Unlike with normal fatigue, the effect ends as soon as the spell’s duration expires.
+You channel negative energy through your touch, fatiguing the target. You must succeed on a touch attack to strike a target. The subject is immediately fatigued for the spell's duration.\n\nThis spell has no effect on a creature that is already fatigued. Unlike with normal fatigue, the effect ends as soon as the spell's duration expires.
 shaman 0, sorcerer/wizard 0, witch 0
 necromancy
 V, S, M (a drop of sweat)
@@ -156,13 +156,13 @@ V, S
 
 ZEROTH
 1, no, Mage Hand, none, close (25 ft. + 5 ft./2 levels), one non-magical; unattended object weighing up to 5 lbs., concentration, 1 standard action
-You point your finger at an object and can lift it and move it at will from a distance. As a move action, you can propel the object as far as 15 feet in any direction, though the spell ends if the distance between you and the object ever exceeds the spell’s range.
+You point your finger at an object and can lift it and move it at will from a distance. As a move action, you can propel the object as far as 15 feet in any direction, though the spell ends if the distance between you and the object ever exceeds the spell's range.
 bard 0, magus 0, psychic 0, sorcerer/wizard 0, summoner/unchained summoner 0
 transmutation
 V, S
 
 ZEROTH
-1, yes (harmless; object), Mending, Will negates (harmless; object), 10 ft., one object of up to 1 lb./level, concentration, 1 standard action
+1, yes (harmless; object), Mending, Will negates (harmless; object), 10 ft., one object of up to 1 lb./level, concentration, 10 minutes
 This spell repairs damaged objects, restoring 1d4 hit points to the object. If the object has the broken condition, this condition is removed if the object is restored to at least half its original hit points. All of the pieces of an object must be present for this spell to function. Magic items can be repaired by this spell, but you must have a caster level equal to or higher than that of the object. Magic items that are destroyed (at 0 hit points or less) can be repaired with this spell, but this spell does not restore their magic abilities. This spell does not affect creatures (including constructs). This spell has no effect on objects that have been warped or otherwise transmuted, but it can still repair damage done to such items.
 bard 0, cleric/oracle 0, druid 0, psychic 0, shaman 0, sorcerer/wizard 0, summoner/unchained summoner 0, witch 0, Elemental School: metal 0
 transmutation
@@ -170,28 +170,28 @@ V, S
 
 ZEROTH
 1, no, Message, none, medium (100 ft. + 10 ft./2 levels), one creature/level, 10 min./level, 1 standard action
-You can whisper messages and receive whispered replies. Those nearby can hear these messages with a DC 25 Perception check. You point your finger at each creature you want to receive the message. When you whisper, the whispered message is audible to all targeted creatures within range. Magical silence, 1 foot of stone, 1 inch of common metal (or a thin sheet of lead), or 3 feet of wood or dirt blocks the spell. The message does not have to travel in a straight line. It can circumvent a barrier if there is an open path between you and the subject, and the path’s entire length lies within the spell’s range. The creatures that receive the message can whisper a reply that you hear. The spell transmits sound, not meaning; it doesn’t transcend language barriers. To speak a message, you must mouth the words and whisper.
+You can whisper messages and receive whispered replies. Those nearby can hear these messages with a DC 25 Perception check. You point your finger at each creature you want to receive the message. When you whisper, the whispered message is audible to all targeted creatures within range. Magical silence, 1 foot of stone, 1 inch of common metal (or a thin sheet of lead), or 3 feet of wood or dirt blocks the spell. The message does not have to travel in a straight line. It can circumvent a barrier if there is an open path between you and the subject, and the path's entire length lies within the spell's range. The creatures that receive the message can whisper a reply that you hear. The spell transmits sound, not meaning; it doesn't transcend language barriers. To speak a message, you must mouth the words and whisper.
 bard 0, psychic 0, sorcerer/wizard 0, summoner/unchained summoner 0, witch 0, Elemental School: air 0
 transmutation [language-dependent]
 V, S, F (a piece of copper wire)
 
 ZEROTH
 1, yes (object), Open-Close, Will negates (object), close (25 ft. + 5 ft./2 levels), object weighing up to 30 lbs. or portal that can be opened or closed, instantaneous, 1 standard action
-You can open or close (your choice) a door, chest, box, window, bag, pouch, bottle, barrel, or other container. If anything resists this activity (such as a bar on a door or a lock on a chest), the spell fails. In addition, the spell can only open and close things weighing 30 pounds or less. Thus, doors, chests, and similar objects sized for enormous creatures may be beyond this spell’s ability to affect.
+You can open or close (your choice) a door, chest, box, window, bag, pouch, bottle, barrel, or other container. If anything resists this activity (such as a bar on a door or a lock on a chest), the spell fails. In addition, the spell can only open and close things weighing 30 pounds or less. Thus, doors, chests, and similar objects sized for enormous creatures may be beyond this spell's ability to affect.
 bard 0, magus 0, psychic 0, sorcerer/wizard 0, summoner/unchained summoner 0
 transmutation
 V, S, F (a brass key)
 
 ZEROTH
 1, yes, Root, Will negates (harmless), touch, creature touched, 1 minute (D), 1 standard action
-This spell strengthens the subject’s connection to the ground below, bolstering its defense against combat maneuvers. It gains a +2 insight bonus to its CMD to resist being moved or tripped and a +2 competence bonus on all Acrobatics checks made to balance or remain standing on earth, sand, stone, or a similar rocky substance.
+This spell strengthens the subject's connection to the ground below, bolstering its defense against combat maneuvers. It gains a +2 insight bonus to its CMD to resist being moved or tripped and a +2 competence bonus on all Acrobatics checks made to balance or remain standing on earth, sand, stone, or a similar rocky substance.
 sorcerer/wizard 0
 transmutation [earth]
 V, S, M (a pinch of dirt)
 
 ZEROTH
 1, yes, Scrivener's Chant, Will negates (harmless; object), 5 ft., one or more written objects, concentration; up to 1 min./level (D), 1 standard action
-This spell imbues a quill with animate energy and rapidly transcribes words from one page to another. The quill copies a written work at the rate of one normal-sized page per minute. The Linguistics skill can be used to make a convincing copy, but otherwise the reproduction is written in the hand of the caster. You must concentrate upon the material being duplicated for the spell’s duration and provide new blank pages as required. The scrivener’s chant requires blank paper and a quill or other writing materials, in addition to the material components.
+This spell imbues a quill with animate energy and rapidly transcribes words from one page to another. The quill copies a written work at the rate of one normal-sized page per minute. The Linguistics skill can be used to make a convincing copy, but otherwise the reproduction is written in the hand of the caster. You must concentrate upon the material being duplicated for the spell's duration and provide new blank pages as required. The scrivener's chant requires blank paper and a quill or other writing materials, in addition to the material components.
 bard 0, cleric/oracle 0, sorcerer/wizard 0
 transmutation
 V, S, M (fine sand and a vial of ink)
