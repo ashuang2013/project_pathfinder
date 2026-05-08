@@ -6,160 +6,9 @@
   <meta name="description" content="Pathfinder 1e character sheet">
   <title>Yang's Pathfinder Character Sheet</title>
  
-  <style>
-    :root {
-      --color-burnt-peach: #D77A61;
-      --color-clay-soil: #764134;
-      --color-desert-sand: #D8B4A0;
-      --color-dust-grey: #DBD3D8;
-      --color-jet-black: #223843;
-      --color-platinum: #EFF1F3;
-      --color-turquoise: #41E2BA;
-    }
- 
-    body {
-      background: var(--color-platinum);
-      font-family: georgia;
-      padding: 50px;
-    }
- 
-    /* header styles */
-    .header {
-      align-items: center;
-      background: var(--color-clay-soil);
-      border: 3px solid var(--color-jet-black);
-      border-radius: 15px;
-      margin-bottom: 15px;
-      padding: 40px; /* top right bottom left */
-    }
- 
-    .header-grid {
-      align-items: center;
-      display: grid;
-      grid-template-columns: 1fr 4fr;
-      gap: 20px;
-    }
- 
-    .header-right {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
- 
-    .header-right-grid {
-      display: grid;
-      grid-template-columns: 1fr 4fr;
-      gap: 12px;
-    }
- 
-    .overview-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-    }
- 
-    /* main content styles */
-    .standard-grid {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 12px;
-      margin-bottom: 16px;
-    }
- 
-    .image-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .two-col-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 12px;
-      margin-bottom: 16px;
-    }
-
-    .three-col-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-    }
-    
-    .character-image {
-      border-radius: 15px;
-      border: 3px solid var(--color-jet-black);
-    }
- 
-    .card {
-      background: var(--color-burnt-peach);
-      border: 3px solid var(--color-jet-black);
-      border-radius: 8px;
-      padding: 16px;
-    }
- 
-    .title-card {
-      background: var(--color-desert-sand);
-      border: 3px solid var(--color-jet-black);
-      border-radius: 8px;
-      padding: 16px;
-      margin-bottom: 16px;
-    }
- 
-    .label {
-      font-size: 13px;
-      color: var(--color-jet-black);
-      margin: 0 0 4px;
-    }
- 
-    .value {
-      font-weight: 500;
-      margin: 0;
-    }
- 
-    .stat-display {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      margin: 0;
-    }
- 
-    .modifier {
-      font-size: 15px;
-      color: var(--color-turquoise);
-      background: var(--color-burnt-peach);
-      border-radius: 4px;
-      padding: 1px 6px;
-      font-family: georgia;
-    }
- 
-    input[type="number"] {
-      background: transparent;
-      border: none;
-      font-family: georgia;
-      font-size: 16px;
-      font-weight: 500;
-      color: var(--color-jet-black);
-      width: 60px;
-      padding: 0;
-    }
- 
-    input[type="number"]:focus {
-      outline: none;
-    }
- 
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
- 
-    input[type="number"] {
-      -moz-appearance: textfield;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
- 
   <!-- HEADER -->
   <div class="header">
     <div class="header-grid">
@@ -170,259 +19,307 @@
       <div class="header-right">
         <div class="card">
           <p class="label">Name</p>
-          <p class="value">Aeliana Nirelith</p>
+          <input type="text" class="value-input" value="Paladin 2">
         </div>
  
         <div class="header-right-grid">
           <div class="card">
             <p class="label">Class</p>
-            <p class="value">Archmage 10</p>
-            <p class="value">Wizard 20</p>
-            <p class="value">Cleric 20</p>
-            <p class="value">Paladin 2</p>
+            <div style="display: flex; flex-direction: column; gap: 4px;">
+              <input type="text" class="value-input" value="Archmage 10">
+              <input type="text" class="value-input" value="Wizard 20">
+              <input type="text" class="value-input" value="Cleric 20">
+              <input type="text" class="value-input" value="Paladin 2">
+            </div>
           </div>
  
           <div class="overview-grid">
             <div class="card">
               <p class="label">Alignment</p>
-              <p class="value">Chaotic Neutral</p>
+              <select class="value-input">
+                <option value="lawful-good">Lawful Good</option>
+                <option value="neutral-good">Neutral Good</option>
+                <option value="chaotic-good">Chaotic Good</option>
+                <option value="lawful-neutral">Lawful Neutral</option>
+                <option value="true-neutral">True Neutral</option>
+                <option value="chaotic-neutral" selected>Chaotic Neutral</option>
+                <option value="lawful-evil">Lawful Evil</option>
+                <option value="neutral-evil">Neutral Evil</option>
+                <option value="chaotic-evil">Chaotic Evil</option>
+              </select>
             </div>
             <div class="card">
               <p class="label">Race</p>
-              <p class="value">Elf</p>
+              <select class="value-input">
+                <option value="dwarf">Dwarf</option>
+                <option value="elf">Elf</option>
+                <option value="gnome">Gnome</option>
+                <option value="half-elf">Half-Elf</option>
+                <option value="halfling">Halfling</option>
+                <option value="half-orc">Half-Orc</option>
+                <option value="human">Human</option>
+              </select>
             </div>
             <div class="card">
               <p class="label">Gender</p>
-              <p class="value">Female</p>
+              <input type="text" class="value-input" value="Female">
             </div>
             <div class="card">
               <p class="label">Height</p>
-              <p class="value">150 cm</p>
+              <input type="text" class="value-input" value="150 cm">
             </div>
             <div class="card">
               <p class="label">Deity</p>
-              <p class="value">Nethys</p>
+              <input type="text" class="value-input" value="Nethys">
             </div>
             <div class="card">
               <p class="label">Size</p>
-              <p class="value">Medium</p>
+              <select class="value-input">
+                <option value="diminutive">Diminutive</option>
+                <option value="tiny">Tiny</option>
+                <option value="small">Small</option>
+                <option value="medium" selected>Medium</option>
+                <option value="large">Large</option>
+                <option value="huge">Huge</option>
+                <option value="gargantuan">Gargantuan</option>
+              </select>
             </div>
             <div class="card">
               <p class="label">Age</p>
-              <p class="value">1000</p>
+              <input type="text" class="value-input" value="1000">
             </div>
             <div class="card">
               <p class="label">Weight</p>
-              <p class="value">50 kg</p>
+              <input type="text" class="value-input" value="50 kg">
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
- 
-  <!-- ABILITY SCORES -->
-  <div class="title-card">
-    <p class="label">Ability Scores</p>
-  </div>
- 
-  <div class="standard-grid">
-    <div class="card">
-      <p class="label">Strength</p>
-      <div class="stat-display">
-        <p class="value" data-score="8">8</p>
-        <span class="modifier"></span>
-      </div>
-    </div>
-    <div class="card">
-      <p class="label">Dexterity</p>
-      <div class="stat-display">
-        <p class="value" data-score="30">30</p>
-        <span class="modifier"></span>
-      </div>
-    </div>
-    <div class="card">
-      <p class="label">Constitution</p>
-      <div class="stat-display">
-        <p class="value" data-score="10">10</p>
-        <span class="modifier"></span>
-      </div>
-    </div>
-    <div class="card">
-      <p class="label">Intelligence</p>
-      <div class="stat-display">
-        <p class="value" data-score="52">52</p>
-        <span class="modifier"></span>
-      </div>
-    </div>
-    <div class="card">
-      <p class="label">Wisdom</p>
-      <div class="stat-display">
-        <p class="value" data-score="24">24</p>
-        <span class="modifier"></span>
-      </div>
-    </div>
-    <div class="card">
-      <p class="label">Charisma</p>
-      <div class="stat-display">
-        <p class="value" data-score="24">24</p>
-        <span class="modifier"></span>
-      </div>
-    </div>
-  </div>
- 
-  <div class="two-col-grid">
 
-    <!-- Left: Hit Points -->
-    <div>
-      <div class="title-card" style="margin-bottom: 12px;">
-        <p class="label">Hit Points</p>
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="overview">Overview</button>
+    <button class="tab-btn" data-tab="details">Details</button>
+    <button class="tab-btn" data-tab="inventory">Inventory</button>
+    <button class="tab-btn" data-tab="skills">Skills</button>
+    <button class="tab-btn" data-tab="spells">Spells</button>
+    <button class="tab-btn" data-tab="buffs-debuffs">Buffs and Debuffs</button>
+  </div> 
+
+  <div class="tab-panel" id="overview">
+    <!-- ABILITY SCORES -->
+    <div class="title-card">
+      <p class="label">Ability Scores</p>
+    </div>
+  
+    <div class="standard-grid">
+      <div class="card">
+        <p class="label">Strength</p>
+        <div class="stat-display">
+          <input type="number" class="value-input" data-ability="str" value="8">
+          <span class="str-modifier"></span>
+        </div>
       </div>
-      <div class="three-col-grid">
-        <div class="card">
-          <p class="label">Current</p>
-          <div class="stat-display">
-            <input type="number" id="current-hp-input" value="175">
-            <span>/ 175</span>
+      <div class="card">
+        <p class="label">Dexterity</p>
+        <div class="stat-display">
+          <input type="number" class="value-input" data-ability="dex" value="24">
+          <span class="dex-modifier"></span>
+        </div>
+      </div>
+      <div class="card">
+        <p class="label">Constitution</p>
+        <div class="stat-display">
+          <input type="number" class="value-input" data-ability="con" value="10">
+          <span class="con-modifier"></span>
+        </div>
+      </div>
+      <div class="card">
+        <p class="label">Intelligence</p>
+        <div class="stat-display">
+          <input type="number" class="value-input" data-ability="int" value="52">
+          <span class="int-modifier"></span>
+        </div>
+      </div>
+      <div class="card">
+        <p class="label">Wisdom</p>
+        <div class="stat-display">
+          <input type="number" class="value-input" data-ability="wis" value="24">
+          <span class="wis-modifier"></span>
+        </div>
+      </div>
+      <div class="card">
+        <p class="label">Charisma</p>
+        <div class="stat-display">
+          <input type="number" class="value-input" data-ability="cha" value="24">
+          <span class="cha-modifier"></span>
+        </div>
+      </div>
+    </div>
+ 
+    <div class="two-col-grid">
+
+      <!-- Left: Hit Points -->
+      <div>
+        <div class="title-card" style="margin-bottom: 12px;">
+          <p class="label">Hit Points</p>
+        </div>
+        <div class="three-col-grid">
+          <div class="card">
+            <p class="label">Current</p>
+            <div class="stat-display">
+              <input type="number" id="current-hp-input" value="175">
+              <span>/ 175</span>
+            </div>
+          </div>
+          <div class="card">
+            <p class="label">Maximum</p>
+            <p class="value">175</p>
+          </div>
+          <div class="card">
+            <p class="label">Nonlethal</p>
+            <p class="value">0</p>
           </div>
         </div>
-        <div class="card">
-          <p class="label">Maximum</p>
-          <p class="value">175</p>
+      </div>
+
+      <!-- Right: Saves -->
+      <div>
+        <div class="title-card" style="margin-bottom: 12px;">
+          <p class="label">Saves</p>
         </div>
-        <div class="card">
-          <p class="label">Nonlethal</p>
-          <p class="value">0</p>
+        <div class="three-col-grid">
+          <div class="card">
+            <p class="label">Fortitude</p>
+            <p class="value">20</p>
+          </div>
+          <div class="card">
+            <p class="label">Reflex</p>
+            <p class="value">25</p>
+          </div>
+          <div class="card">
+            <p class="label">Will</p>
+            <p class="value">40</p>
+          </div>
         </div>
+      </div>
+
+    </div>
+
+    <!-- MOVEMENT -->
+    <div class="title-card">
+      <p class="label">Movement</p>
+    </div>
+  
+    <div class="standard-grid">
+      <div class="card">
+        <p class="label">Land</p>
+        <p class="value">45 ft</p>
+      </div>
+      <div class="card">
+        <p class="label">Swim</p>
+        <p class="value">45 ft</p>
+      </div>
+      <div class="card">
+        <p class="label">Fly</p>
+        <p class="value">300 ft Perfect</p>
+      </div>
+      <div class="card">
+        <p class="label">Climb</p>
+        <p class="value">45 ft</p>
+      </div>
+      <div class="card">
+        <p class="label">Burrow</p>
+        <p class="value">45 ft</p>
       </div>
     </div>
 
-    <!-- Right: Saves -->
-    <div>
-      <div class="title-card" style="margin-bottom: 12px;">
-        <p class="label">Saves</p>
+    <!-- OFFENSE -->
+    <div class="title-card">
+      <p class="label">Offense</p>
+    </div>
+  
+    <div class="standard-grid">
+      <div class="card">
+        <p class="label">Initiative</p>
+        <p class="value">20</p>
       </div>
-      <div class="three-col-grid">
-        <div class="card">
-          <p class="label">Fortitude</p>
-          <p class="value">20</p>
-        </div>
-        <div class="card">
-          <p class="label">Reflex</p>
-          <p class="value">25</p>
-        </div>
-        <div class="card">
-          <p class="label">Will</p>
-          <p class="value">40</p>
-        </div>
+      <div class="card">
+        <p class="label">BAB</p>
+        <p class="value">16</p>
+      </div>
+      <div class="card">
+        <p class="label">Melee</p>
+        <p class="value"></p>
+      </div>
+      <div class="card">
+        <p class="label">Ranged</p>
+        <p class="value">26 +10 Crossbow</p>
+      </div>
+      <div class="card">
+        <p class="label">CMB</p>
+        <p class="value">10</p>
       </div>
     </div>
-
+ 
+    <!-- DEFENSE -->
+    <div class="title-card">
+      <p class="label">Defense</p>
+    </div>
+  
+    <div class="standard-grid">
+      <div class="card">
+        <p class="label">AC</p>
+        <p class="value">36</p>
+      </div>
+      <div class="card">
+        <p class="label">Touch AC</p>
+        <p class="value">20</p>
+      </div>
+      <div class="card">
+        <p class="label">FF AC</p>
+        <p class="value">26</p>
+      </div>
+      <div class="card">
+        <p class="label">CMD</p>
+        <p class="value">25</p>
+      </div>
+      <div class="card">
+        <p class="label">Damage Reduction</p>
+        <p class="value">DR 15/ -</p>
+      </div>
+      <div class="card">
+        <p class="label">Spell Resistance</p>
+        <p class="value">30</p>
+      </div>
+    </div>
   </div>
 
-  <!-- MOVEMENT -->
-  <div class="title-card">
-    <p class="label">Movement</p>
-  </div>
- 
-  <div class="standard-grid">
-    <div class="card">
-      <p class="label">Land</p>
-      <p class="value">45 ft</p>
-    </div>
-    <div class="card">
-      <p class="label">Swim</p>
-      <p class="value">45 ft</p>
-    </div>
-    <div class="card">
-      <p class="label">Fly</p>
-      <p class="value">300 ft Perfect</p>
-    </div>
-    <div class="card">
-      <p class="label">Climb</p>
-      <p class="value">45 ft</p>
-    </div>
-    <div class="card">
-      <p class="label">Burrow</p>
-      <p class="value">45 ft</p>
-    </div>
+  <div class="tab-panel" id="details" style="display:none">
+    <!-- details (language, senses) content coming later -->
   </div>
 
-  <!-- OFFENSE -->
-  <div class="title-card">
-    <p class="label">Offense</p>
+  <div class="tab-panel" id="inventory" style="display:none">
+    <!-- inventory content coming later -->
+  </div>
+
+  <div class="tab-panel" id="skills" style="display:none">
+    <div class="title-card">
+      <p class="label">Skills</p>
+    </div>
+    <div id="skills-container" class="standard-grid"></div> <!-- implement hovering for a skill description -->
+  </div>
+
+  <div class="tab-panel" id="spells" style="display:none">
+    <!-- spells content coming later -->
+  </div>
+
+  <div class="tab-panel" id="buffs-debuffs" style="display:none">
+    <!-- buffs content coming later -->
   </div>
  
-  <div class="standard-grid">
-    <div class="card">
-      <p class="label">Initiative</p>
-      <p class="value">20</p>
-    </div>
-    <div class="card">
-      <p class="label">BAB</p>
-      <p class="value">16</p>
-    </div>
-    <div class="card">
-      <p class="label">Melee</p>
-      <p class="value"></p>
-    </div>
-    <div class="card">
-      <p class="label">Ranged</p>
-      <p class="value">26 +10 Crossbow</p>
-    </div>
-    <div class="card">
-      <p class="label">CMB</p>
-      <p class="value">10</p>
-    </div>
-  </div>
- 
-  <!-- DEFENSE -->
-  <div class="title-card">
-    <p class="label">Defense</p>
-  </div>
- 
-  <div class="standard-grid">
-    <div class="card">
-      <p class="label">AC</p>
-      <p class="value">36</p>
-    </div>
-    <div class="card">
-      <p class="label">Touch AC</p>
-      <p class="value">20</p>
-    </div>
-    <div class="card">
-      <p class="label">FF AC</p>
-      <p class="value">26</p>
-    </div>
-    <div class="card">
-      <p class="label">CMD</p>
-      <p class="value">25</p>
-    </div>
-    <div class="card">
-      <p class="label">Damage Reduction</p>
-      <p class="value">DR 15/ -</p>
-    </div>
-    <div class="card">
-      <p class="label">Spell Resistance</p>
-      <p class="value">30</p>
-    </div>
-  </div>
- 
-  <!-- TODO: tabs for skills, buffs, spellcasting, inventory -->
- 
-  <script>
-    document.querySelectorAll('[data-score]').forEach(el => {
-      const score = parseInt(el.dataset.score);
-      const mod = Math.floor((score - 10) / 2);
-      const sign = mod >= 0 ? '+' : '';
-      el.nextElementSibling.textContent = `(${sign}${mod})`;
-    });
- 
-    const input = document.querySelector('#current-hp-input');
-    input.addEventListener('change', function(e) {
-      const currentHp = e.target.value;
-    });
-  </script>
+  <script src="script.js"></script>
  
 </body>
 </html>
