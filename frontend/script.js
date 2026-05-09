@@ -87,3 +87,27 @@ for (let {name, ability} of skills) {
 }
 
 renderSkills();
+
+spelllist = [];
+
+async function fetchSpells() {
+    const response = await fetch('http://127.0.0.1:8000/spells');
+    const data = await response.json();
+    spelllist = data;
+    renderSpells();
+}
+
+function renderSpells() {
+    console.log('render spells called', spelllist);
+    let spells_container = document.getElementById('spells-container');
+    spells_container.innerHTML = '';
+    for (let spell of spelllist) {
+        let card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `<p class="label">${spell.name} </p><p class="value">${"Level: " + spell.level}</p>
+            <p class="value">${"Description: " + spell.description}</p>`;
+        spells_container.appendChild(card);
+    }
+}
+
+fetchSpells();
