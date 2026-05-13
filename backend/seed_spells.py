@@ -3,63 +3,47 @@ import time
 from bs4 import BeautifulSoup
 from pymongo import MongoClient
 
+SORCERER_WIZARD_OVERRIDE_URLS = {
+    "Bestow Planar Infusion I": "https://www.d20pfsrd.com/magic/all-spells/b/bestow-planar-infusion-i/",
+}
+
 # MongoDB connection
 client = MongoClient("mongodb://127.0.0.1:27017")
 db = client["pathfinder"]
 spells_collection = db["spells"]
 
-def get_zeroth_level_spells():
-    """fetch the list of 0-level spells from d20pfsrd"""
+def get_sorcerer_wizard_spell_list_soup():
     url = "https://www.d20pfsrd.com/magic/spell-lists-and-domains/spell-lists-sorcerer-and-wizard/"
-    try:
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-    except Exception as e:
-        print(f"ERROR fetching spell list: {e}")
-        return []
+    response = requests.get(url, timeout=10)
+    response.raise_for_status()
+    return BeautifulSoup(response.text, "html.parser")
 
-    soup = BeautifulSoup(response.text, "html.parser")
-
+# sorcerer/wizard spell distribution count by level
+# cantrips: 36
+# 1st level: 249 or 241
+# 2nd level: 342
+# 3rd level: 198
+# 4th level: 152
+# 5th level: 139
+# 6th level: 122
+# 7th level: 121
+# 8th level: 91
+# 9th level: 83
+# total: 1261
+def get_sorcerer_wizard_nth_level_spells(soup, n):
     all_tables = soup.find_all("table")
-    level_0_table = all_tables[0]  # first table is always cantrips
-
+    level_table = all_tables[n]
     spells = []
-    for link in level_0_table.find_all("a", class_="spell"):
-        name = link.text.strip()
+    for link in level_table.find_all("a", class_="spell"):
+        name = link.text.strip().title()
         href = link["href"]
         spells.append((name, href))
-        
     return spells
 
-def get_first_level_spells():
-    """fetch the list of 1-level spells from d20pfsrd"""
-    url = "https://www.d20pfsrd.com/magic/spell-lists-and-domains/spell-lists-sorcerer-and-wizard/"
-    try:
-        response = requests.get(url, timeout=10)
-        response.raise_for_status()
-    except Exception as e:
-        print(f"ERROR fetching spell list: {e}")
-        return []
-
-    soup = BeautifulSoup(response.text, "html.parser")
-
-    all_tables = soup.find_all("table")
-    level_1_table = all_tables[1]  # second table is always 1st level spells
-
-    spells = []
-    for link in level_1_table.find_all("a", class_="spell"):
-        name = link.text.strip()
-        href = link["href"]
-        spells.append((name, href))
-        
-    return spells
-
-# sorcerer/wizard cantrips to scrape (excluding ones already in DB)
-CANTRIP_URLS = get_zeroth_level_spells()
-FIRST_LEVEL_URLS = get_first_level_spells()
-
-COMPLETE_URLS = [CANTRIP_URLS,
-                 FIRST_LEVEL_URLS]
+soup = get_sorcerer_wizard_spell_list_soup()
+# sorcerer/wizard spells to scrape (excluding ones already in DB)
+SORCERER_WIZARD_COMPLETE_URLS = [get_sorcerer_wizard_nth_level_spells(soup, n) for n in range(2)]
+#SORCERER_WIZARD_COMPLETE_URLS = [get_sorcerer_wizard_nth_level_spells(soup, n) for n in range(10)]
 
 def parse_spell(name, url):
     """fetch and parse a spell page from d20pfsrd"""
@@ -143,13 +127,14 @@ def parse_spell(name, url):
 
 def seed_spells():
     level = 0
-    for url_list in COMPLETE_URLS:
-        print(f"Starting {level} level seed — {len(url_list)} spells to process...")
+    for url_list in SORCERER_WIZARD_COMPLETE_URLS:
+        print(f"Starting level {level} seed — {len(url_list)} spells to process...")
         inserted = 0
         skipped = 0
         failed = 0
 
         for name, url in url_list:
+            name = name.strip().title() # normalize name
             # skip if already in DB
             if spells_collection.find_one({"name": name}):
                 print(f"  SKIP  {name} (already exists)")
@@ -157,6 +142,7 @@ def seed_spells():
                 continue
 
             print(f"  FETCH {name} ...")
+            url = SORCERER_WIZARD_OVERRIDE_URLS.get(name, url) # override URL for known exceptions
             spell = parse_spell(name, url)
 
             if spell:
@@ -167,7 +153,7 @@ def seed_spells():
                 print(f"  FAIL  {name} — skipping")
                 failed += 1
 
-            time.sleep(0.5)  # delay between requests
+            time.sleep(0.1) # delay between requests
 
         print(f"  -     {inserted} INSERT, {skipped} SKIP, {failed} FAIL\n")
         level += 1
@@ -175,9 +161,9 @@ def seed_spells():
 
 if __name__ == "__main__":
     seed_spells()
-    #  FETCH Bestow Planar Infusion I ...
-  #ERROR fetching Bestow Planar Infusion I: 404 Client Error: Not Found for url: https://www.d20pfsrd.com/magic/all-spells/b/bestow-planar-infusion/
-    # like flare and Flare
-    # some issues with different spells being lowercase all, some issues with cascading spells like alarm and invisible alarm?
-    # refactor later, can combine all spells into one function since I can iterate down all the tables
-    # first level spells arent actually going into the db
+
+    # TODO KNOWN ISSUES:
+    # Multiple variants of the same spell (see snowball https://www.d20pfsrd.com/magic/all-spells/s/snowball/)
+    # Incorporate hyperlinks within the descriptions(see spells that link to each other https://www.d20pfsrd.com/magic/all-spells/f/form-of-the-dragon-i/)
+    # Null descriptions: Penumbra, Scoop, and Jolt (possibly more)
+    # Detect Magic, Greater is identified as a cantrip (source data problem, edge case)
