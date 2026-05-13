@@ -1,5 +1,23 @@
-# project_pathfinder
-Creating a fully robust and interactable Pathfinder 1e character sheet with spells, skills, and buffs and debuffs. Currently implementing the backend with MongoDB and FastAPI using Python. Cleaning up as needed. 
-Eventual migration to AWS for cloud hosting.
+# Pathfinder 1e Character Sheet
 
-NOTE: the current backend is not functional due to GitHub Pages being static host of index.html
+A full stack Pathfinder 1e character sheet application featuring dynamic spell management, skills, inventory, and buff/debuff tracking.
+
+## Stack
+- Frontend: JavaScript, HTML, CSS
+- Backend: FastAPI (Python)  
+- Database: MongoDB
+- Deployment: AWS (planned)
+
+## Features
+- Dynamic ability score calculations with real time modifier display
+- Tab-based navigation across character sections
+- Spell database populated via custom web scraper
+- REST API connecting frontend to MongoDB backend
+
+## Roadmap
+- Full CRUD spell management
+- React/TypeScript frontend migration
+- PostgreSQL database migration
+- AWS deployment
+- Skills and inventory tabs
+- Buffs and conditions system
