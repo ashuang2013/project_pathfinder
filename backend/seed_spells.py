@@ -150,12 +150,12 @@ def seed_spells():
                 print(f"  OK    {name} inserted")
                 inserted += 1
             else:
-                print(f"  FAIL  {name} — skipping")
+                print(f"  FAIL  {name} skipping")
                 failed += 1
 
             time.sleep(0.1) # delay between requests
 
-        print(f"  -     {inserted} INSERT, {skipped} SKIP, {failed} FAIL\n")
+        print(f"  -     {inserted} INSERTED, {skipped} SKIPPED, {failed} FAILED\n")
         level += 1
     print("SEEDING COMPLETE")
 
