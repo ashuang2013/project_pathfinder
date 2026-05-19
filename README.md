@@ -15,8 +15,7 @@ A full stack Pathfinder 1e character sheet application featuring dynamic spell m
 - REST API connecting frontend to MongoDB backend
 
 ## Roadmap
-- Full CRUD spell management
-- React/TypeScript frontend migration
+- React/TypeScript frontend migration (in progress)
 - PostgreSQL database migration
 - AWS deployment
 - Skills and inventory tabs
