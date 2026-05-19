@@ -1,22 +1,21 @@
 function SpellCard(
-    { name, school, level, casting_time, components, range, area, target, effect, duration, 
-      saving_throw, spell_resistance, description }) {
+    { spell }) {
   return (
     <div className="spell-card">
-      <h2>{name}</h2>
-      <b>School: </b> {school} <br /> <b>Level: </b> {level} <br />
+      <h2>{spell.name}</h2>
+      <b>School: </b> {spell.school} <br /> <b>Level: </b> {spell.level} <br />
       <h4>CASTING</h4>
-      <b>Casting Time: </b> {casting_time} <br />
-      <b>Components: </b> {components} <br />
+      <b>Casting Time: </b> {spell.casting_time} <br />
+      <b>Components: </b> {spell.components} <br />
       <h4>EFFECT</h4>
-      <b>Range: </b> {range} <br />
-      <b>Target: </b> {target} <br />
-      <b>Effect: </b> {effect} <br />
-      <b>Area: </b> {area} <br />
-      <b>Duration: </b> {duration} <br />
-      <b>Saving Throw: </b> {saving_throw} <br /> <b>Spell Resistance: </b> {spell_resistance} <br />
+      <b>Range: </b> {spell.range} <br />
+      <b>Target: </b> {spell.target} <br />
+      <b>Effect: </b> {spell.effect} <br />
+      <b>Area: </b> {spell.area} <br />
+      <b>Duration: </b> {spell.duration} <br />
+      <b>Saving Throw: </b> {spell.saving_throw} <br /> <b>Spell Resistance: </b> {spell.spell_resistance} <br />
       <h4>DESCRIPTION</h4>
-      <b>Description: </b> {description} <br />
+      <b>Description: </b> {spell.description} <br />
     </div>
   );
 }

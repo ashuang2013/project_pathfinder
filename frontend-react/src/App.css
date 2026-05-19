@@ -1,38 +1,211 @@
-.App {
-  text-align: center;
-}
+    :root {
+      --color-burnt-peach: #D77A61;
+      --color-clay-soil: #764134;
+      --color-desert-sand: #D8B4A0;
+      --color-dust-grey: #DBD3D8;
+      --color-jet-black: #223843;
+      --color-platinum: #EFF1F3;
+      --color-turquoise: #41E2BA;
+    }
+ 
+    body {
+      background: var(--color-platinum);
+      font-family: georgia;
+      padding: 50px;
+    }
+ 
+    /* header styles */
+    .header {
+      align-items: center;
+      background: var(--color-clay-soil);
+      border: 3px solid var(--color-jet-black);
+      border-radius: 15px;
+      margin-bottom: 15px;
+      padding: 40px; /* top right bottom left */
+    }
+ 
+    .header-grid {
+      align-items: center;
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      gap: 20px;
+    }
+ 
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+ 
+    .header-right-grid {
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      gap: 12px;
+    }
+ 
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+    }
+ 
+    /* main content styles */
+    .standard-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+ 
+    .image-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+    .two-col-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+    .three-col-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+    }
+    
+    .character-image {
+      border-radius: 15px;
+      border: 3px solid var(--color-jet-black);
+    }
+ 
+    .card {
+      background: var(--color-burnt-peach);
+      border: 3px solid var(--color-jet-black);
+      border-radius: 8px;
+      padding: 16px;
+    }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+    .spell-card {
+      background: var(--color-burnt-peach);
+      border: 3px solid var(--color-jet-black);
+      border-radius: 8px;
+      padding: 16px;
+    }
+ 
+    .title-card {
+      background: var(--color-desert-sand);
+      border: 3px solid var(--color-jet-black);
+      border-radius: 8px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+ 
+    .label {
+      font-size: 13px;
+      color: var(--color-jet-black);
+      margin: 0 0 4px;
+    }
+ 
+    .value {
+      font-weight: 500;
+      margin: 0;
+    }
+ 
+    .stat-display {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0;
+    }
+ 
+    .modifier {
+      font-size: 15px;
+      color: var(--color-turquoise);
+      background: var(--color-burnt-peach);
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-family: georgia;
+    }
 
-.App-link {
-  color: #61dafb;
-}
+    .value-input {
+      background: transparent;
+      border: none;
+      font-family: georgia;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-jet-black);
+      width: 100%;
+      appearance: none; /* removes default browser styling */
+      padding: 0;
+    }
+ 
+    .value-input:focus {
+      outline: none;
+    }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+    textarea.value-input {
+      background: transparent;
+      border: none;
+      font-family: georgia;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-jet-black);
+      width: 100%;
+      padding: 0;
+      resize: none; /* prevents the user from dragging to resize it */
+      overflow: hidden; /* hides scrollbar */
+    }
+
+    textarea.value-input:focus {
+      outline: none;
+    }
+
+    .tab-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .tab-btn {
+      background: var(--color-dust-grey);
+      border: 3px solid var(--color-jet-black);
+      border-radius: 8px;
+      color: var(--color-jet-black);
+      cursor: pointer;
+      font-family: georgia;
+      font-size: 14px;
+      padding: 8px 20px;
+    }
+
+    .tab-btn.active {
+      background: var(--color-clay-soil);
+      color: var(--color-platinum);
+    }
+
+    input[type="number"] {
+      background: transparent;
+      border: none;
+      font-family: georgia;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-jet-black);
+      width: 60px;
+      padding: 0;
+    }
+ 
+    input[type="number"]:focus {
+      outline: none;
+    }
+ 
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+ 
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
