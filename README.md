@@ -3,7 +3,7 @@
 A full stack Pathfinder 1e character sheet application featuring dynamic spell management, skills, inventory, and buff/debuff tracking.
 
 ## Stack
-- Frontend: JavaScript, HTML, CSS
+- Frontend: React, JavaScript, HTML, CSS
 - Backend: FastAPI (Python)  
 - Database: MongoDB
 - Deployment: AWS (planned)
@@ -16,7 +16,7 @@ A full stack Pathfinder 1e character sheet application featuring dynamic spell m
 
 ## Roadmap
 - React/TypeScript frontend migration (in progress)
+- AWS deployment (in progress)
 - PostgreSQL database migration
-- AWS deployment
 - Skills and inventory tabs
 - Buffs and conditions system
