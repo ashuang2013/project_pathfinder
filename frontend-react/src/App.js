@@ -1,59 +1,45 @@
-import logo from './logo.svg';
-import SpellCard from './SpellCard'
+import Overview from './components/Overview'
+import Spell from './components/Spell'
+import Statistic from './components/Statistic';
+import TabBar from './components/TabBar'
 
 import './App.css';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 function App() {
-  const [spells, initSpells] = useState([]);
-  const [search, setSearch] = useState('');
-  const [schoolFilter, setSchoolFilter] = useState('');
-  const [classFilter, setClassFilter] = useState(''); //includes class and level
+  const [activeTab, setActiveTab] = useState('overview');
+  const [character, setCharacter] = useState({
+    // header
+    name: 'Aeliana Nirelith', className: 'Wizard 20, Archmage 10', 
+    alignment: 'chaotic neutral', race: 'elf', deity: 'Nethys', size: 'Medium',
+    gender: 'Female', height: '165 cm', age: '1000', weight: '50 kg',
+    str: 16, dex: 26, con: 18, int: 48, wis: 32, cha: 24,
+    currHp: 175, maxHp: 175, nonLethal: 0,
+    fortitude: 20, reflex: 25, will: 40,
+    land: '45 ft', swim: '45 ft', fly: '300 ft perfect', climb: '45 ft', burrow: '45 ft',
+    init: 20, bab: 16, melee: '', ranged: '', cmb: 10,
+    ac: 36, touch: 20, ff: 26, cmd: 25, dr: '15/-', sr: 30 
+    //skills
+    //details
+    //inventory
+    //spells
+    //buffs
+    //debuffs
+  });  
 
-  async function fetchSpells() {
-      const response = await fetch('http://127.0.0.1:8000/spells');
-      const data = await response.json();
-      initSpells(data);
-  }
-
-  useEffect(() => {
-    fetchSpells();
-  }, []);
-
-  const filteredSpells = spells.filter(sp =>
-    (sp.name.toLowerCase().includes(search.toLowerCase()) && 
-    (schoolFilter === '' || sp.school === schoolFilter.toLowerCase()) &&
-    (classFilter === '' || sp.level.includes(classFilter.toLowerCase())))
-  ); 
-
-  const schools = ['Abjuration', 'Conjuration', 'Divination', 'Enchantment', 'Evocation', 'Illusion', 'Necromancy', 'Transmutation'];
-  const classes = ['Wizard', 'Sorcerer', 'Cleric', 'Paladin', 'Ranger', 'Druid', 'Bard', 'Rogue'];
-  
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="Search spells..."
-        value={search}
-        onChange={e => setSearch(e.target.value)}
-      />
-      <select value={schoolFilter} onChange={e => setSchoolFilter(e.target.value)}>
-        <option value="">All Schools</option>
-        {schools.map(school => (
-          <option key={school} value={school}>{school}</option>
-        ))}
-      </select>
-      <select value={classFilter} onChange={e => setClassFilter(e.target.value)}>
-        <option value="">All Classes</option>
-        {classes.map(cls => (
-          <option key={cls} value={cls}>{cls}</option>
-        ))}
-      </select>
-      {filteredSpells.map(sp => (
-        <SpellCard key={sp.id} spell={sp} />
-      ))}
+    <div className="overview">
+      <Overview character={character} setCharacter={setCharacter}/>
+      <div className="top-tab">
+        <TabBar activeTab={activeTab} setActiveTab={setActiveTab} />
+        {activeTab === 'overview' && <Statistic character={character} setCharacter={setCharacter}/>}
+        {activeTab === 'details' && <div>Details coming soon</div>}
+        {activeTab === 'inventory' && <div>Inventory coming soon</div>}
+        {activeTab === 'skills' && <div>Skills coming soon</div>}
+        {activeTab === 'spells' && <Spell />}
+        {activeTab === 'buffs-debuffs' && <div>Buffs coming soon</div>}
+      </div>
     </div>
-    
   );
 }
 

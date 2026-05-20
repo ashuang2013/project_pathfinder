@@ -1,5 +1,4 @@
-function SpellCard(
-    { spell }) {
+function SpellCard({spell}) {
   return (
     <div className="spell-card">
       <h2>{spell.name}</h2>
