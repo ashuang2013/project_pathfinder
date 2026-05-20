@@ -167,3 +167,4 @@ if __name__ == "__main__":
     # Incorporate hyperlinks within the descriptions(see spells that link to each other https://www.d20pfsrd.com/magic/all-spells/f/form-of-the-dragon-i/)
     # Null descriptions: Penumbra, Scoop, and Jolt (possibly more)
     # Detect Magic, Greater is identified as a cantrip (source data problem, edge case)
+    # Weapon qualities like Keen and Ghost Touch snuck in as spells
