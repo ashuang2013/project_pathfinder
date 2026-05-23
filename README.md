@@ -3,20 +3,22 @@
 A full stack Pathfinder 1e character sheet application featuring dynamic spell management, skills, inventory, and buff/debuff tracking.
 
 ## Stack
-- Frontend: JavaScript, HTML, CSS
+- Frontend: React, JavaScript, HTML, CSS
 - Backend: FastAPI (Python)  
 - Database: MongoDB
 - Deployment: AWS (planned)
 
 ## Features
-- Dynamic ability score calculations with real time modifier display
-- Tab-based navigation across character sections
-- Spell database populated via custom web scraper
-- REST API connecting frontend to MongoDB backend
+- Component-based React frontend with tab navigation
+- Dynamic ability score calculations with live modifier display
+- Spell browser with search and filter by name, school, and class
+- 627 spells served from REST API backed by MongoDB
+- Custom web scraper (BeautifulSoup) to populate spell database
 
 ## Roadmap
-- React/TypeScript frontend migration (in progress)
-- PostgreSQL database migration
+- Spell card expand/collapse
 - AWS deployment
+- TypeScript migration
+- PostgreSQL for character persistence
 - Skills and inventory tabs
 - Buffs and conditions system
