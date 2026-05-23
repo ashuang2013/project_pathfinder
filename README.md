@@ -16,8 +16,7 @@ A full stack Pathfinder 1e character sheet application featuring dynamic spell m
 - Custom web scraper (BeautifulSoup) to populate spell database
 
 ## Roadmap
-- Spell card expand/collapse
-- AWS deployment
+- AWS deployment (in progress)
 - TypeScript migration
 - PostgreSQL for character persistence
 - Skills and inventory tabs
