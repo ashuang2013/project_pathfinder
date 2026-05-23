@@ -92,6 +92,7 @@
       background: var(--color-burnt-peach);
       border: 3px solid var(--color-jet-black);
       border-radius: 8px;
+      cursor: pointer;
       padding: 16px;
     }
  
