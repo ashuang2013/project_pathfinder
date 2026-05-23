@@ -1,5 +1,5 @@
 @echo off
-start cmd /k "mongosh"
-start cmd /k "cd backend && conda activate base && uvicorn main:app --reload"
-start cmd /k "cd frontend-react && npm start"
-start cmd /k "cd C:\Users\ashua\Documents\Alex's Desktop\CS Projects\project_pathfinder"
+start powershell -NoExit -Command "mongosh"
+start powershell -NoExit -Command "cd backend; conda activate base; uvicorn main:app --reload"
+start powershell -NoExit -Command "cd frontend-react; npm start"
+start powershell -NoExit
