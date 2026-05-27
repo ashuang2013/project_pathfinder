@@ -8,6 +8,8 @@ from pymongo import MongoClient
 from pymongo.server_api import ServerApi
 from typing import Optional
 
+load_dotenv()
+
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
@@ -15,8 +17,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-load_dotenv()
 
 # client = MongoClient("mongodb://127.0.0.1:27017")
 uri = os.getenv("MONGODB_URI")
