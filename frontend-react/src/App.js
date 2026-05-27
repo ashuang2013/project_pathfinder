@@ -11,7 +11,7 @@ function App() {
   const [character, setCharacter] = useState({
     // header
     name: 'Aeliana Nirelith', className: 'Wizard 20, Archmage 10', 
-    alignment: 'chaotic neutral', race: 'elf', deity: 'Nethys', size: 'Medium',
+    alignment: 'chaotic neutral', race: 'elf', deity: 'Nethys', size: 'medium',
     gender: 'Female', height: '165 cm', age: '1000', weight: '50 kg',
     str: 16, dex: 26, con: 18, int: 48, wis: 32, cha: 24,
     currHp: 175, maxHp: 175, nonLethal: 0,
@@ -27,7 +27,7 @@ function App() {
     //debuffs
   });  
 
-  return (
+  return ( //TODO: might want to change the overview and statistics class names around
     <div className="overview">
       <Overview character={character} setCharacter={setCharacter}/>
       <div className="top-tab">

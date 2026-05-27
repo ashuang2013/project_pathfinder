@@ -1,7 +1,11 @@
+import os 
+
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware 
 from pydantic import BaseModel
 from pymongo import MongoClient
+from pymongo.server_api import ServerApi
 from typing import Optional
 
 app = FastAPI()
@@ -12,7 +16,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-client = MongoClient("mongodb://127.0.0.1:27017")
+load_dotenv()
+
+# client = MongoClient("mongodb://127.0.0.1:27017")
+uri = os.getenv("MONGODB_URI")
+client = MongoClient(uri, server_api=ServerApi('1'))
 db = client["pathfinder"]
 spell_collection = db["spells"]
 
