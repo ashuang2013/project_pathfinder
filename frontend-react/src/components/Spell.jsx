@@ -9,7 +9,7 @@ function Spell() {
   const [classFilter, setClassFilter] = useState(''); //includes class and level
 
   async function fetchSpells() {
-      const response = await fetch('http://127.0.0.1:8000/spells');
+      const response = await fetch('http://34.239.240.114/spells');
       const data = await response.json();
       initSpells(data);
   }
