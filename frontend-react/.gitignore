@@ -11,6 +11,10 @@
 # production
 /build
 
+# python
+__pycache__/
+*.pyc
+
 # env
 backend/.env
 
