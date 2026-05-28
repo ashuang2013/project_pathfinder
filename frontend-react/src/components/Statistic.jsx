@@ -1,11 +1,20 @@
 import {getModifier} from '../utils/calculations.js'
+import { useState } from 'react';
 
-function Statistic({character}) {
+function Statistic({character, setCharacter}) {
   const formatMod = (score) => {
     const mod = getModifier(score)
     const sign = mod >= 0 ? '+' : '';
     return `(${sign}${mod})`;
   };
+
+  const [newStr, setNewStr] = useState(character.str)
+  const [newDex, setNewDex] = useState(character.dex)
+  const [newCon, setNewCon] = useState(character.con)
+  const [newInt, setNewInt] = useState(character.int)
+  const [newWis, setNewWis] = useState(character.wis)
+  const [newCha, setNewCha] = useState(character.cha)
+  const [newCurrHp, setNewCurrHp] = useState(character.currHp)
 
   return(
     <div>
@@ -17,42 +26,84 @@ function Statistic({character}) {
         <div className="card">
           <p className="label">Strength</p>
           <div className="stat-display">
-            <input type="number" className="value-input" data-ability="str" defaultValue={character.str}/>
+            <input 
+              type="number"
+              className="value-input" 
+              data-ability="str"
+              value={newStr}
+              onChange={e => setNewStr(parseInt(e.target.value))}
+              onBlur={() => setCharacter({...character, str: newStr})}
+            />
             <span className="str-modifier">{formatMod(character.str)}</span>
           </div>
         </div>
         <div className="card">
           <p className="label">Dexterity</p>
           <div className="stat-display">
-            <input type="number" className="value-input" data-ability="dex" defaultValue={character.dex}/>
+            <input 
+              type="number"
+              className="value-input" 
+              data-ability="dex"
+              value={newDex}
+              onChange={e => setNewDex(parseInt(e.target.value))}
+              onBlur={() => setCharacter({...character, dex: newDex})}
+            />
             <span className="dex-modifier">{formatMod(character.dex)}</span>
           </div>
         </div>
         <div className="card">
           <p className="label">Constitution</p>
           <div className="stat-display">
-            <input type="number" className="value-input" data-ability="con" defaultValue={character.con}/>
+            <input 
+              type="number"
+              className="value-input" 
+              data-ability="con"
+              value={newCon}
+              onChange={e => setNewCon(parseInt(e.target.value))}
+              onBlur={() => setCharacter({...character, con: newCon})}
+            />
             <span className="con-modifier">{formatMod(character.con)}</span>
           </div>
         </div>
         <div className="card">
           <p className="label">Intelligence</p>
           <div className="stat-display">
-            <input type="number" className="value-input" data-ability="int" defaultValue={character.int}/>
+            <input 
+              type="number"
+              className="value-input" 
+              data-ability="int"
+              value={newInt}
+              onChange={e => setNewInt(parseInt(e.target.value))}
+              onBlur={() => setCharacter({...character, int: newInt})}
+            />
             <span className="int-modifier">{formatMod(character.int)}</span>
           </div>
         </div>
         <div className="card">
           <p className="label">Wisdom</p>
           <div className="stat-display">
-            <input type="number" className="value-input" data-ability="wis" defaultValue={character.wis}/>
+            <input 
+              type="number"
+              className="value-input" 
+              data-ability="wis"
+              value={newWis}
+              onChange={e => setNewWis(parseInt(e.target.value))}
+              onBlur={() => setCharacter({...character, wis: newWis})}
+            />
             <span className="wis-modifier">{formatMod(character.wis)}</span>
           </div>
         </div>
         <div className="card">
           <p className="label">Charisma</p>
           <div className="stat-display">
-            <input type="number" className="value-input" data-ability="cha" defaultValue={character.cha}/>
+            <input 
+              type="number"
+              className="value-input" 
+              data-ability="cha"
+              value={newCha}
+              onChange={e => setNewCha(parseInt(e.target.value))}
+              onBlur={() => setCharacter({...character, cha: newCha})}
+            />
             <span className="cha-modifier">{formatMod(character.cha)}</span>
           </div>
         </div>
@@ -67,7 +118,12 @@ function Statistic({character}) {
             <div className="card">
               <p className="label">Current</p>
               <div className="stat-display">
-                <input type="number" id="current-hp-input" defaultValue={character.currHp}/>
+                <input 
+                  type="number"
+                  id="current-hp-input"
+                  value={newCurrHp}
+                  onChange={e => setNewCurrHp(parseInt(e.target.value))}
+                />
                 <span>/ {character.maxHp}</span>
               </div>
             </div>
