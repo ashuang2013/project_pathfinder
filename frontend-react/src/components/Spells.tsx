@@ -14,19 +14,6 @@ function Spells() {
   const [schoolFilter, setSchoolFilter] = useState('');
   const [classFilter, setClassFilter] = useState(''); //includes class and level
 
-<<<<<<< HEAD:frontend-react/src/components/Spell.jsx
-  async function fetchSpells() {
-      const response = await fetch('https://api.yangystudios.com/spells');
-      const data = await response.json();
-      initSpells(data);
-  }
-
-  useEffect(() => {
-    fetchSpells();
-  }, []);
-
-=======
->>>>>>> feature/react:frontend-react/src/components/Spells.tsx
   const filteredSpells = spells.filter(sp =>
     (sp.name.toLowerCase().includes(searchFilter.toLowerCase()) && 
     (schoolFilter === '' || sp.school === schoolFilter.toLowerCase()) &&
