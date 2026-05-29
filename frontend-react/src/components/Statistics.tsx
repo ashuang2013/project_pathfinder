@@ -1,6 +1,13 @@
+import { Character } from '../types'
+
 import Aeliana from '../images/Aeliana.jpg';
 
-function Overview({character}) {
+interface StatisticsProps {
+  character: Character;
+  setCharacter: (character: Character) => void
+}
+
+function Statistics({character, setCharacter}: StatisticsProps) {
   return (
     <div className="header">
       <div className="header-grid">
@@ -18,7 +25,9 @@ function Overview({character}) {
             <div className="card">
               <p className="label">Class</p>
               <div style={{display: 'flex', flexDirection: 'column', gap: '4px'}}>
-                <input type="text" className="value-input" defaultValue={character.className}/> 
+                {character.classes.map((cls, index) => (
+                  <input key={index} type="text" className="value-input" defaultValue={cls} />
+                ))}
               </div>
             </div>
   
@@ -64,10 +73,11 @@ function Overview({character}) {
               <div className="card">
                 <p className="label">Size</p>
                 <select className="value-input" defaultValue={character.size}>
+                  <option value="fine">Fine</option>
                   <option value="diminutive">Diminutive</option>
                   <option value="tiny">Tiny</option>
                   <option value="small">Small</option>
-                  <option value="medium" selected>Medium</option>
+                  <option value="medium">Medium</option>
                   <option value="large">Large</option>
                   <option value="huge">Huge</option>
                   <option value="gargantuan">Gargantuan</option>
@@ -89,4 +99,4 @@ function Overview({character}) {
   );
 }
 
-export default Overview;
+export default Statistics;

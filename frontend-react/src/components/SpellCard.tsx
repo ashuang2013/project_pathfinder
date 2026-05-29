@@ -1,6 +1,8 @@
 import { useState } from 'react';
 
-function SpellCard({spell}) {
+import { Spell } from '../types'
+
+function SpellCard({spell}: {spell: Spell}) {
   const [expanded, setExpanded] = useState(false);
 
   return (
