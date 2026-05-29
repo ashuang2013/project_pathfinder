@@ -28,16 +28,15 @@ A full stack Pathfinder 1e character sheet application featuring dynamic spell m
   than serving from EC2.
 
 ## Roadmap
-- PostgreSQL for character persistence
-- ECS Fargate containerization
-- Skills and inventory tabs
-- Buffs and conditions system
+### Infrastructure
+- Docker containerization, ECS Fargate replacing EC2
+- CI/CD pipeline via GitHub Actions
+- pytest + Jest test suites
 
-## Planned Additions
-- Rework ui for the search bar
-- Make field nonlethal enterable, strength should not be changeable later
-- Hover over cards for breakdowns (40 Dex = 10 base + 8 Belt of Incredible Dexterity + 10 Tome of Incredible Dex + 12 Miscellaneous)
-- Character persistence 
-- Import all spell lists
-- Import classes
-- Rework UI
+### Features
+- Character persistence via PostgreSQL (AWS RDS)
+- JWT authentication and multi-character accounts
+- Skills, inventory, and conditions tabs
+- Condition tracking system
+- Hover breakdowns on stat cards
+- Full spell list import (levels 2-9)
