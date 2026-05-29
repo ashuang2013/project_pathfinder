@@ -5,7 +5,7 @@ A full stack Pathfinder 1e character sheet application featuring dynamic spell m
 **Live Demo:** https://www.yangystudios.com/
 
 ## Stack
-- Frontend: React, JavaScript, HTML, CSS - hosted on AWS S3
+- Frontend: React, TypeScript, HTML, CSS - hosted on AWS S3
 - Backend: FastAPI (Python) - hosted on AWS EC2 behind nginx
 - Database: MongoDB Atlas
 - Deployment: AWS EC2, S3, nginx, systemd
@@ -28,7 +28,6 @@ A full stack Pathfinder 1e character sheet application featuring dynamic spell m
   than serving from EC2.
 
 ## Roadmap
-- TypeScript migration
 - PostgreSQL for character persistence
 - ECS Fargate containerization
 - Skills and inventory tabs
