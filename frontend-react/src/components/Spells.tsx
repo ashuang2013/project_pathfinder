@@ -1,13 +1,20 @@
-import SpellCard from './SpellCard'
-
 import { useState, useEffect } from 'react';
 
-function Spell() {
-  const [spells, initSpells] = useState([]);
-  const [search, setSearch] = useState('');
+import { Spell } from '../types'
+
+import SpellCard from './SpellCard'
+
+function Spells() {
+  const schools = ['Abjuration', 'Conjuration', 'Divination', 'Enchantment', 'Evocation', 'Illusion', 'Necromancy', 'Transmutation'];
+  const classes = ['Wizard', 'Sorcerer', 'Cleric', 'Paladin', 'Ranger', 'Druid', 'Bard', 'Rogue'];
+
+  const [spells, initSpells] = useState<Spell[]>([]);
+
+  const [searchFilter, setSearchFilter] = useState('');
   const [schoolFilter, setSchoolFilter] = useState('');
   const [classFilter, setClassFilter] = useState(''); //includes class and level
 
+<<<<<<< HEAD:frontend-react/src/components/Spell.jsx
   async function fetchSpells() {
       const response = await fetch('https://api.yangystudios.com/spells');
       const data = await response.json();
@@ -18,22 +25,30 @@ function Spell() {
     fetchSpells();
   }, []);
 
+=======
+>>>>>>> feature/react:frontend-react/src/components/Spells.tsx
   const filteredSpells = spells.filter(sp =>
-    (sp.name.toLowerCase().includes(search.toLowerCase()) && 
+    (sp.name.toLowerCase().includes(searchFilter.toLowerCase()) && 
     (schoolFilter === '' || sp.school === schoolFilter.toLowerCase()) &&
-    (classFilter === '' || sp.level.includes(classFilter.toLowerCase())))
+    (classFilter === '' || !sp.level || sp.level.includes(classFilter.toLowerCase())))
   ); 
 
-  const schools = ['Abjuration', 'Conjuration', 'Divination', 'Enchantment', 'Evocation', 'Illusion', 'Necromancy', 'Transmutation'];
-  const classes = ['Wizard', 'Sorcerer', 'Cleric', 'Paladin', 'Ranger', 'Druid', 'Bard', 'Rogue'];
+  useEffect(() => {
+    async function fetchSpells() {
+      const response = await fetch('https://api.yangystudios.com/spells');
+      const data = await response.json();
+      initSpells(data);
+    }
+    fetchSpells();
+  }, []);
   
   return (
     <div>
       <input
         type="text"
-        placeholder="Search spells..."
-        value={search}
-        onChange={e => setSearch(e.target.value)}
+        placeholder="Search..."
+        value={searchFilter}
+        onChange={e => setSearchFilter(e.target.value)}
       />
       <select value={schoolFilter} onChange={e => setSchoolFilter(e.target.value)}>
         <option value="">All Schools</option>
@@ -54,4 +69,4 @@ function Spell() {
     );
 }
 
-export default Spell;
+export default Spells;

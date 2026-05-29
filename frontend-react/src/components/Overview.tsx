@@ -1,8 +1,16 @@
-import {getModifier} from '../utils/calculations.js'
 import { useState } from 'react';
 
-function Statistic({character, setCharacter}) {
-  const formatMod = (score) => {
+import { getModifier } from '../utils/calculations'
+
+import { Character } from '../types'
+
+interface OverviewProps {
+  character: Character;
+  setCharacter: (character: Character) => void
+}
+
+function Overview({character, setCharacter}: OverviewProps) {
+  const formatMod = (score: number): string => {
     const mod = getModifier(score)
     const sign = mod >= 0 ? '+' : '';
     return `(${sign}${mod})`;
@@ -248,4 +256,4 @@ function Statistic({character, setCharacter}) {
   );
 }
 
-export default Statistic;
+export default Overview;
