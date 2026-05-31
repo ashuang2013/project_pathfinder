@@ -35,8 +35,10 @@ A full stack Pathfinder 1e character sheet application featuring dynamic spell m
 
 ### Features
 - Character persistence via PostgreSQL (AWS RDS)
+- ML recommendation engine
 - JWT authentication and multi-character accounts
 - Skills, inventory, and conditions tabs
 - Condition tracking system
 - Hover breakdowns on stat cards
 - Full spell list import (levels 2-9)
+- UI Rework and character microwave
