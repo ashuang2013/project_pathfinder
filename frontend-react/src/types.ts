@@ -1,3 +1,11 @@
+export type AbilityScore = 
+  | 'str'
+  | 'dex'
+  | 'con'
+  | 'int'
+  | 'wis'
+  | 'cha';
+
 export type Alignment = 
   | 'lawful-good'
   | 'neutral-good'
@@ -36,6 +44,17 @@ export type Tab =
   | 'skills'
   | 'spells'
   | 'conditions';
+
+export interface Skill {
+  name: string;
+  modifier: number;
+  ranks: number;
+  ability: AbilityScore;
+  class_skill: boolean;
+  acp: boolean;
+  requires_training: boolean;
+  description: string;
+}
 
 export interface Spell {
   id?: string;

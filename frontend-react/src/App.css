@@ -95,6 +95,15 @@
       cursor: pointer;
       padding: 16px;
     }
+
+    .skill-card {
+      background: var(--color-burnt-peach);
+      border: 3px solid var(--color-jet-black);
+      border-radius: 8px;
+      cursor: pointer;
+      padding: 16px;
+      white-space: pre-wrap;
+    }
  
     .title-card {
       background: var(--color-desert-sand);

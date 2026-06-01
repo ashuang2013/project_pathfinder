@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Character, Tab } from './types'
 
 import Overview   from './components/Overview'
+import Skills     from './components/Skills'
 import Spells     from './components/Spells'
 import Statistics from './components/Statistics';
 import TabBar     from './components/TabBar'
@@ -51,7 +52,7 @@ function App() {
         {activeTab === 'overview'   && <Overview character={character} setCharacter={setCharacter}/>}
         {activeTab === 'details'    && <div>Details coming soon</div>}
         {activeTab === 'inventory'  && <div>Inventory coming soon</div>}
-        {activeTab === 'skills'     && <div>Skills coming soon</div>}
+        {activeTab === 'skills'     && <Skills character={character}/>}
         {activeTab === 'spells'     && <Spells/>}
         {activeTab === 'conditions' && <div>Conditions coming soon</div>}
       </div>
